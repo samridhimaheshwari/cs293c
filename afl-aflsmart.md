@@ -22,4 +22,6 @@ afl-fuzz -i input -o output -- ./openssl/ssl @@
 ```
 
 ## Running AFLSmart
+```
 afl-fuzz -h -i input -o output -w peach -g input_model_file ./openssl/ssl @@
+```
