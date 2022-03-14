@@ -18,5 +18,8 @@ make -j$(nproc) # use maximum proc available
 mkdir input
 cp /bin/ps input/ #putting random values in input  
 mkdir output
-afl-fuzz -i input -o output -- ./readelf @@
+afl-fuzz -i input -o output -- ./openssl/ssl @@
 ```
+
+## Running AFLSmart
+afl-fuzz -h -i input -o output -w peach -g input_model_file ./openssl/ssl @@
