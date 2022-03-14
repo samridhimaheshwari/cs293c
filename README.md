@@ -1,7 +1,7 @@
 In this project we evaluated AFL, AFLSmart, LibFuzzer and Honggfuzz. 
 
 1. We used google's fuzz testing suite to get the target binaries for each application - https://github.com/google/fuzzer-test-suite
-2. We ran the fuzzers using the specific flags and compiled the outputs
+2. We ran the fuzzers using the specific flags and collected the outputs
 
 
 Specific Fuzzer repos - 
