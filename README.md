@@ -1,5 +1,3 @@
-# cs293c
-
 In this project we evaluated AFL, AFLSmart, LibFuzzer and Honggfuzz. 
 
 1. We used google's fuzz testing suite to get the target binaries for each application - https://github.com/google/fuzzer-test-suite
