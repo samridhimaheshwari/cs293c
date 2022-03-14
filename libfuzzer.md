@@ -1,20 +1,23 @@
 # Clone binutils project
 ``` sh
 # clone the target
-git clone git://sourceware.org/git/binutils-gdb.git
+git clone https://github.com/openssl/openssl.git OpenSSL_1_1_0c
 
-cd binutils-gdb
+cd openssl
 
-# compile all binutils tools
+# compile target
 ./configure 
 make -j$(nproc) # use maximum proc available
 ```
 
 ## Build using LibFuzzer flags
-
 ``` sh
 # create input folder
-clang++ /input/seeds/* -fsanitize=address,fuzzer -jobs = 8 target.cpp
+mkdir /input/seeds
+cp /bin/ps /input/seeds
+
+#run fuzzer on target.cc which has LLVMFuzzerTestOneInput function calling the libraries functions
+clang++ /input/seeds/* -fsanitize=address,fuzzer -jobs = 8 target.cc
 ./a.out
 
 
