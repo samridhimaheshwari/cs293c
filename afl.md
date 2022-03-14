@@ -18,5 +18,5 @@ make -j$(nproc) # use maximum proc available
 mkdir input
 cp /bin/ps input/ #putting random values in input  
 mkdir output
-afl-fuzz -i afl_in -o afl_out -- ./readelf @@
+afl-fuzz -i input -o output -- ./readelf @@
 ```
