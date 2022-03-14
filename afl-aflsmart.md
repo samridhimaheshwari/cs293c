@@ -1,11 +1,11 @@
-# Clone binutils project
+# Clone SSL
 ``` sh
 # clone the target
 git clone git://sourceware.org/git/binutils-gdb.git
 
-cd binutils-gdb
+cd openssl
 
-# compile all binutils tools
+# compile all ssl tools
 ./configure 
 export CC=afl-gcc
 make -j$(nproc) # use maximum proc available
