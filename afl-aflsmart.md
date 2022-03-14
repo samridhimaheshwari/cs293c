@@ -1,7 +1,7 @@
 # Clone SSL
 ``` sh
 # clone the target
-git clone git://sourceware.org/git/binutils-gdb.git
+git clone https://github.com/openssl/openssl.git OpenSSL_1_1_0c
 
 cd openssl
 
