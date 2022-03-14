@@ -1,7 +1,7 @@
-# Clone binutils project
+# Clone SSL
 ``` sh
 # clone the target
-git clone git://sourceware.org/git/binutils-gdb.git
+git clone https://github.com/openssl/openssl.git OpenSSL_1_1_0c
 ```
 
 ``` sh
@@ -9,7 +9,7 @@ git clone git://sourceware.org/git/binutils-gdb.git
 export CC=$(pwd)/honggfuzz/hfuzz_cc/hfuzz-clang
 export CXX=$(pwd)/honggfuzz/hfuzz_cc/hfuzz-clang++
 
-cd binutils-gdb
+cd openssl
 
 # compile all binutils tools
 ./configure 
@@ -18,4 +18,4 @@ make -j$(nproc) # use maximum proc available
 ## Run honggfuzz
 
 mkdir input
-../honggfuzz/honggfuzz -i input -- ./binutils/readelf --file-header ___FILE___
+../honggfuzz/honggfuzz -i input -- ./openssl/ssl --file-header ___FILE___
