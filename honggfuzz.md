@@ -15,16 +15,7 @@ cd binutils-gdb
 ./configure 
 make -j$(nproc) # use maximum proc available
 
-# verify your target is compiled with honggfuzz
-nm ./binutils/readelf | grep hfuzz 
-```
-
 ## Run honggfuzz
 
-``` sh
-# create input folder
 mkdir input
-
-# run honggfuzz
 ../honggfuzz/honggfuzz -i input -- ./binutils/readelf --file-header ___FILE___
-```
