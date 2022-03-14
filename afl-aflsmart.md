@@ -11,7 +11,7 @@ export CC=afl-gcc
 make -j$(nproc) # use maximum proc available
 ```
 
-## Build and run AFL
+## Build and running AFL
 
 ``` 
 # create input folder
