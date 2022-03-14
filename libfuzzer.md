@@ -1,4 +1,4 @@
-# Clone binutils project
+# Clone SSL specific version
 ``` sh
 # clone the target
 git clone https://github.com/openssl/openssl.git OpenSSL_1_1_0c
